@@ -11,7 +11,6 @@ const svg = d3.select("#my_dataviz")
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-let initialYear = 1950;
 let data;
 
 // method for plotting the graph
@@ -139,13 +138,13 @@ function graphPlotter(selectedYear, selectedata) {
 
 // Method for finding selected year from dropdown
 function selectYear() {
-  selectedYear = document.getElementById("year").value;
+  let selectedYear = document.getElementById("year").value;
   graphPlotter(selectedYear, data);
 }
 
 // fetch the data from api using D3 fetch
 d3.csv("https://gist.githubusercontent.com/amkreddy555/fd5fb73640dbfc2ce34bf4395a06dc53/raw/40ae2479c93eb3f9ccab7bf1946212b1c0d0f904/Population_Data.csv").then(function (incomingData) {
-  data = incomingData;
+  data = incomingData;//Assigning to global variable for future use
 
   // for Generating unique Year values in the dropdown
   const availableYears = data.map(d => d.Year);
@@ -162,5 +161,5 @@ d3.csv("https://gist.githubusercontent.com/amkreddy555/fd5fb73640dbfc2ce34bf4395
   }
 
   // call the plot method for plotting the graph on initial load with default Year
-  graphPlotter(initialYear, data);
+  graphPlotter(uniqueYears[0], data);
 })
