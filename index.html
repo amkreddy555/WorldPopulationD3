@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Mohan Krishna">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bubbeld chart using D3">
+    <meta name="keywords" content="HTML,CSS,JavaScript, Responsive, D3">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>World Population Growth</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+    <!--div for Header-->
+    <div class="section1">
+        <img class="section1Image" src="images\abc.png">
+    </div>
+
+    <!--div for Year Dropdown-->
+    <div class="section2">
+        <select name="years" id="year" class="content selectBox" onchange="selectYear()"></select>
+    </div>
+
+    <!--div for Graph content-->
+    <div class="section3">
+        <div class="content">
+            <table class="">
+                <tr>
+                    <td>World Population <span id="demo"></span></td>
+                    <td class="linegraph">Population Growth</td>
+                </tr>
+                <tr>
+                    <td><span class="tddata" id="totPop"></span><span class="tddata2"></span></td>
+                    <td class="linegraph">Line Graph (optional)</td>
+                </tr>
+            </table>
+
+            <h3>Population Growth vs Density Correlation</h3>
+
+            <!--div for the graph-->
+            <div id="my_dataviz"></div>
+
+            <!--Legends marking Optional feature-->
+            <div class="center legends-container">
+                <div class="legend-color red"></div>&nbsp; Asia &nbsp; &nbsp;
+                <div class="legend-color green"></div>&nbsp; Australia &nbsp; &nbsp;
+                <div class="legend-color yellow"></div>&nbsp; North America &nbsp; &nbsp;
+                <div class="legend-color blue"></div>&nbsp; Africa &nbsp; &nbsp;
+                <div class="legend-color orange"></div>&nbsp; Ocenia &nbsp;
+            </div>
+            <p class="center">Bubble size indicates country's population</p>
+            <p class="center"><i>Tool Tip display squence: Country's Name, Population, Population Density, Population
+                    Growth Rate</i></p>
+        </div>
+    </div>
+
+    <!-- Load d3.js v6 -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+
+    <!-- Load script file -->
+    <script src="index.js"></script>
+</body>
+
+</html>
