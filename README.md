@@ -5,3 +5,7 @@
 * Sample gif breifing the functionality
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/38201687/210480120-6d4cb37e-242f-4c90-817c-5ff5b8c6f9bd.gif)
+
+* Sample Screenshot with increased bubble size
+![image](https://user-images.githubusercontent.com/38201687/210506373-cff36c27-723a-4908-bd32-b07b4fc048a5.png)
+
