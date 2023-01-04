@@ -82,7 +82,7 @@ function graphPlotter(selectedYear, selectedata) {
   // Add a scale for bubble size
   const z = d3.scaleLinear()
     .domain(zDomain)
-    .range([1, 10]);
+    .range([1, 20]);
 
   // tooltip
   const tooltip = d3.select("#my_dataviz")
