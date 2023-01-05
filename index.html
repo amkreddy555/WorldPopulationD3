@@ -25,33 +25,35 @@
     <!--div for Graph content-->
     <div class="section3">
         <div class="content">
-            <table class="">
+            <table class="centerMobile">
                 <tr>
                     <td>World Population <span id="demo"></span></td>
                     <td class="linegraph">Population Growth</td>
                 </tr>
                 <tr>
-                    <td><span class="tddata" id="totPop"></span><span class="tddata2"></span></td>
+                    <td><span class="tddata" id="totPop"></span><span class="tddata2"> million</span></td>
                     <td class="linegraph">Line Graph (optional)</td>
                 </tr>
             </table>
 
-            <h3>Population Growth vs Density Correlation</h3>
+            <div class="graphSection">
+                <h3>Population Growth vs Density Correlation</h3>
+                <!--div for the graph-->
+                <div id="my_dataviz" class="graphControl"></div>
 
-            <!--div for the graph-->
-            <div id="my_dataviz"></div>
-
-            <!--Legends marking Optional feature-->
-            <div class="center legends-container">
-                <div class="legend-color red"></div>&nbsp; Asia &nbsp; &nbsp;
-                <div class="legend-color green"></div>&nbsp; Australia &nbsp; &nbsp;
-                <div class="legend-color yellow"></div>&nbsp; North America &nbsp; &nbsp;
-                <div class="legend-color blue"></div>&nbsp; Africa &nbsp; &nbsp;
-                <div class="legend-color orange"></div>&nbsp; Ocenia &nbsp;
+                <!--Legends marking Optional feature-->
+                <div class="legends-container">
+                    <div class="legend-color red"></div>&nbsp; Asia &nbsp; &nbsp;
+                    <div class="legend-color green"></div>&nbsp; Australia &nbsp; &nbsp;
+                    <div class="legend-color yellow"></div>&nbsp; North America &nbsp; &nbsp;
+                    <div class="legend-color blue"></div>&nbsp; Africa &nbsp; &nbsp;
+                    <div class="legend-color orange"></div>&nbsp; Ocenia &nbsp;
+                </div>
+                <h4>Bubble size indicates country's population</h4>
+                <p><i>*Tool Tip display squence: Country's Name, Population, Population Density,
+                        Population
+                        Growth Rate</i></p>
             </div>
-            <p class="center">Bubble size indicates country's population</p>
-            <p class="center"><i>Tool Tip display squence: Country's Name, Population, Population Density, Population
-                    Growth Rate</i></p>
         </div>
     </div>
 
