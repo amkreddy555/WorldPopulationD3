@@ -1,6 +1,6 @@
 // setting the dimensions and margins of the graph
 const margin = { top: 10, right: 150, bottom: 50, left: 50 },
-  width = 500 - margin.left - margin.right,
+  width = 900 - margin.left - margin.right,
   height = 360 - margin.top - margin.bottom;
 
 // append the svg object to the body
@@ -25,15 +25,18 @@ function graphPlotter(selectedYear, selectedata) {
 
   function populationSum(arr) {
     let sum = 0;
+    const specialChars = /\,/g;
     arr.forEach(item => {
-      item = item.replace(/\,/g, '');
+      if (specialChars.test(item)) {
+        item = item.replace(/\,/g, '');
+      }
       item = parseInt(item, 10);
       sum += item;
     });
     return sum;
   }
 
-  let total_population = populationSum(population_values);
+  let total_population = populationSum(population_values) / 1000000; //converting to Millions
 
   document.getElementById("totPop").innerHTML = total_population.toLocaleString(); //number display format of en-US
 
@@ -56,7 +59,7 @@ function graphPlotter(selectedYear, selectedata) {
   // Add X axis label:
   svg.append("text")
     .attr("text-anchor", "end")
-    .attr("x", width - 90)
+    .attr("x", width - 290)
     .attr("y", height + margin.top + 25)
     .text("Population Density");
 
@@ -142,8 +145,8 @@ function selectYear() {
   graphPlotter(selectedYear, data);
 }
 
-// fetch the data from api using D3 fetch
-d3.csv("https://gist.githubusercontent.com/amkreddy555/fd5fb73640dbfc2ce34bf4395a06dc53/raw/40ae2479c93eb3f9ccab7bf1946212b1c0d0f904/Population_Data.csv").then(function (incomingData) {
+// fetching the data from an api having data in csv file using D3 fetch
+d3.csv("https://gist.githubusercontent.com/amkreddy555/fd5fb73640dbfc2ce34bf4395a06dc53/raw").then(function (incomingData) {
   data = incomingData;//Assigning to global variable for future use
 
   // for Generating unique Year values in the dropdown
