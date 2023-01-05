@@ -4,7 +4,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .section1 {
@@ -50,6 +50,14 @@ td {
     padding: 10px;
 }
 
+.graphControl {
+    overflow: auto;
+}
+
+.graphSection {
+    margin-top: 25px;
+}
+
 .legends-container {
     display: flex !important;
     align-items: center;
@@ -79,10 +87,6 @@ td {
 
 .orange {
     background-color: #f3b121c0;
-}
-
-.center {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .bubbles {
@@ -118,6 +122,25 @@ td {
         margin: 0px auto;
         width: 60px;
         height: 60px;
+    }
+
+    [class*="graphControl"] {
+        overflow: auto;
+    }
+
+    [class*="selectBox"] {
+        margin-left: 40%;
+    }
+
+    [class*="centerMobile"] {
+        margin: auto;
+    }
+
+    [class*="graphSection"] {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
