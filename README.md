@@ -1,4 +1,4 @@
-# Assignment3
+# World Population D3
 * World Population bubble chart using D3.js, Javascript, HTML, CSS and it is Responsive.
 * Bubble chart will be updated based on year selected in the Year dropdown filter.
 * Bubble size represents count of population.
